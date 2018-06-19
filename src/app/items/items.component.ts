@@ -9,6 +9,10 @@ import { ItemsService, Item } from '../shared';
 export class ItemsComponent implements OnInit {
   items: Item[];
   currentItem: Item;
+  message = {
+    text: "whatever",
+    id: 42
+  };
 
   constructor(private itemsService: ItemsService) { }
 
