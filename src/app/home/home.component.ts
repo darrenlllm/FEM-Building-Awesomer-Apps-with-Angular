@@ -10,15 +10,21 @@ import { Item } from '../shared/item.model';
 })
 export class HomeComponent implements OnInit {
   items: Item[];
+  serviceInfo;
 
   constructor(private itemsService: ItemsService) { }
 
   ngOnInit() {
     this.getItems();
+    this.getServiceInfo();
   }
 
   getItems() {
     this.itemsService.all()
       .subscribe(items => this.items = items);
+  }
+
+  getServiceInfo() {
+    this.serviceInfo = this.itemsService.info;
   }
 }

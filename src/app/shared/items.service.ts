@@ -13,6 +13,10 @@ const HEADER = {headers: new Headers({'Content-Type': 'application/json'})};
 
 @Injectable()
 export class ItemsService {
+  info = {
+    name: 'ItemsService',
+    id: 24
+  };
   constructor(private http: Http) {
   }
 
